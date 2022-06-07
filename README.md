@@ -1,6 +1,6 @@
 # About Aplication
 
-The application is responsible for create lists and notes.
+The application is responsible for create and manage lists and notes.
 
 # Getting Started with Create React App
 
