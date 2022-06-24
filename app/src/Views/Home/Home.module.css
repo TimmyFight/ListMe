@@ -3,3 +3,10 @@
   background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
   min-height: 100vh;
 }
+
+.notesContainer {
+  width: 80%;
+  margin: 0 10%;
+  padding-top: 40px;
+  display: flex;
+}
