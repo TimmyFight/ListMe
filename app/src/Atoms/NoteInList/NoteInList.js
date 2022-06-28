@@ -1,4 +1,5 @@
 import styles from "./NoteInList.module.css";
+import TitleH3 from "../../Atoms/TitleH3/TitleH3";
 
 const NoteInList = (props) => {
   const { noteTitle, noteContent } = props;
@@ -13,7 +14,7 @@ const NoteInList = (props) => {
 
   return (
     <li className={styles.elementNoteList}>
-      <h3 className={styles.noteTitle}>{noteTitle}</h3>
+      <TitleH3>{noteTitle}</TitleH3>
       <p className={styles.noteContent}>{noteContentCut(noteContent)}</p>
     </li>
   );
