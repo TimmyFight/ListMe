@@ -1,3 +1,8 @@
 .notesListContainer {
   flex: 1;
 }
+
+.notesList {
+  padding: 0;
+  list-style: none;
+}
