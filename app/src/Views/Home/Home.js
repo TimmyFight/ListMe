@@ -5,18 +5,20 @@ import PreviewNote from "../../Modules/PreviewNote/PreviewNote";
 import NotesList from "../../Modules/NotesList/NotesList";
 
 const Home = () => {
-  let [listOfNotes, addNote] = useState([]);
+  let [listOfNotes, setListOfNotes] = useState([]);
 
-  addNote = (event) => {
+  const addNote = (event) => {
     event.preventDefault();
     const noteTitle = document.querySelector('[name="noteTitle"]').value;
     const noteContent = document.querySelector('[name="noteContent"]').value;
+    let templistOfNotes = listOfNotes;
     const note = {
       noteTitle: noteTitle,
       noteContent: noteContent,
     };
-    console.log("Note: ", listOfNotes);
-    return listOfNotes.push(note);
+    templistOfNotes.push(note);
+    setListOfNotes([...templistOfNotes]);
+    return true;
   };
 
   return (
