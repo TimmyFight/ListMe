@@ -9,8 +9,13 @@ const Home = () => {
 
   const addNote = (event) => {
     event.preventDefault();
-    const noteTitle = document.querySelector('[name="noteTitle"]').value;
-    const noteContent = document.querySelector('[name="noteContent"]').value;
+    let noteTitle = document.querySelector(
+      '#noteForm [name="noteTitle"]'
+    ).value;
+    let noteContent = document.querySelector(
+      '#noteForm [name="noteContent"]'
+    ).value;
+
     let templistOfNotes = listOfNotes;
     const note = {
       noteTitle: noteTitle,
