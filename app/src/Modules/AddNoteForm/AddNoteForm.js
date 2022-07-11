@@ -1,5 +1,8 @@
 import styles from "./AddNoteForm.module.css";
 import TitleH2 from "../../Atoms/TitleH2/TitleH2";
+import FormInput from "../../Atoms/FormInput/FormInput";
+import FormTextArea from "../../Atoms/FormTextArea/FormTextArea";
+import FormButton from "../../Atoms/FormButton/FormButton";
 
 const AddNoteForm = (props) => {
   const { onSubmitHandler } = props;
@@ -8,23 +11,21 @@ const AddNoteForm = (props) => {
     <section className={styles.noteFormContainer}>
       <TitleH2>Add note</TitleH2>
       <form id="noteForm" onSubmit={onSubmitHandler}>
-        <input
+        <FormInput
           type="text"
           name="noteTitle"
           title="Note title"
           placeholder="Note title"
           required="required"
         />
-        <textarea
+        <FormTextArea
           type="text"
           name="noteContent"
           title="Note content"
           placeholder="Here you can write your note"
           required="required"
         />
-        <button type="submit" value="Send Request">
-          Send Request
-        </button>
+        <FormButton type="submit">Add Note</FormButton>
       </form>
     </section>
   );
