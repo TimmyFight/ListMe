@@ -8,6 +8,7 @@ import RemoveButton from "../../Atoms/RemoveButton/RemoveButton";
 
 const Home = () => {
   let [listOfNotes, setListOfNotes] = useState([]);
+  let [activeNoteIndex, setActiveNoteIndex] = useState(false);
 
   const addNote = (event) => {
     event.preventDefault();
@@ -30,10 +31,12 @@ const Home = () => {
 
   const removeNote = (event) => {
     event.preventDefault();
+    event.stopPropagation();
     const itemToRemove = event.target.parentNode.getAttribute("data-key");
     let templistOfNotes = listOfNotes;
     templistOfNotes.splice(itemToRemove, 1);
     setListOfNotes([...templistOfNotes]);
+    setActiveNoteIndex(false);
     return true;
   };
 
@@ -49,13 +52,27 @@ const Home = () => {
                 noteContent={elem.noteContent}
                 indexItem={index}
                 key={index}
+                activeNoteIndex={activeNoteIndex}
+                onClickHandler={setActiveNoteIndex}
               >
                 <RemoveButton onClickHandler={removeNote} />
               </NoteInList>
             );
           })}
         </NotesList>
-        <PreviewNote />
+        <PreviewNote
+          activeNoteTitle={
+            activeNoteIndex !== false
+              ? listOfNotes[activeNoteIndex].noteTitle
+              : null
+          }
+          activeNoteContent={
+            activeNoteIndex !== false
+              ? listOfNotes[activeNoteIndex].noteContent
+              : null
+          }
+          activeNoteIndex={activeNoteIndex}
+        />
       </section>
     </div>
   );
