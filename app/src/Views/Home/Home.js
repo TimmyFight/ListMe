@@ -46,7 +46,7 @@ const Home = () => {
       <AddNoteForm onSubmitHandler={addNote} />
       {listOfNotes.length === 0 ? (
         <section className={styles.zeroNotes}>
-          <ZeroNotes />
+          <ZeroNotes>Add your first Note</ZeroNotes>
         </section>
       ) : (
         <section className={styles.notesContainer}>
