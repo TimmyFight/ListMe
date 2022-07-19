@@ -16,7 +16,7 @@ const NoteInList = (props) => {
   const noteContentCut = (noteContent) => {
     let noteShorter = noteContent;
     if (noteContent.length > 50) {
-      noteShorter = noteContent.substr(50, noteContent.length) + "...";
+      noteShorter = noteContent.substr(0, 50) + "...";
     }
     return noteShorter;
   };

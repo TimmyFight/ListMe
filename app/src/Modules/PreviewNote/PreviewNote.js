@@ -9,14 +9,14 @@ const PreviewNote = (props) => {
         {activeNoteIndex === false ||
         activeNoteContent === null ||
         activeNoteTitle === null
-          ? "Click in your Note!"
+          ? "Click on your Note!"
           : activeNoteTitle}
       </TitleH2>
       <p>
         {activeNoteIndex === false ||
         activeNoteContent === null ||
         activeNoteTitle === null
-          ? "Here will be your active note!"
+          ? "Here will be your full active note"
           : activeNoteContent}
       </p>
     </section>

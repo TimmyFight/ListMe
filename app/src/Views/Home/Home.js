@@ -3,6 +3,7 @@ import styles from "./Home.module.css";
 import AddNoteForm from "../../Modules/AddNoteForm/AddNoteForm";
 import PreviewNote from "../../Modules/PreviewNote/PreviewNote";
 import NotesList from "../../Modules/NotesList/NotesList";
+import ZeroNotes from "../../Modules/ZeroNotes/ZeroNotes";
 import NoteInList from "../../Atoms/NoteInList/NoteInList";
 import RemoveButton from "../../Atoms/RemoveButton/RemoveButton";
 
@@ -43,37 +44,43 @@ const Home = () => {
   return (
     <div className={styles.appBody}>
       <AddNoteForm onSubmitHandler={addNote} />
-      <section className={styles.notesContainer}>
-        <NotesList listOfNotes={listOfNotes}>
-          {listOfNotes.map((elem, index) => {
-            return (
-              <NoteInList
-                noteTitle={elem.noteTitle}
-                noteContent={elem.noteContent}
-                indexItem={index}
-                key={index}
-                activeNoteIndex={activeNoteIndex}
-                onClickHandler={setActiveNoteIndex}
-              >
-                <RemoveButton onClickHandler={removeNote} />
-              </NoteInList>
-            );
-          })}
-        </NotesList>
-        <PreviewNote
-          activeNoteTitle={
-            activeNoteIndex !== false
-              ? listOfNotes[activeNoteIndex].noteTitle
-              : null
-          }
-          activeNoteContent={
-            activeNoteIndex !== false
-              ? listOfNotes[activeNoteIndex].noteContent
-              : null
-          }
-          activeNoteIndex={activeNoteIndex}
-        />
-      </section>
+      {listOfNotes.length === 0 ? (
+        <section className={styles.zeroNotes}>
+          <ZeroNotes />
+        </section>
+      ) : (
+        <section className={styles.notesContainer}>
+          <NotesList listOfNotes={listOfNotes}>
+            {listOfNotes.map((elem, index) => {
+              return (
+                <NoteInList
+                  noteTitle={elem.noteTitle}
+                  noteContent={elem.noteContent}
+                  indexItem={index}
+                  key={index}
+                  activeNoteIndex={activeNoteIndex}
+                  onClickHandler={setActiveNoteIndex}
+                >
+                  <RemoveButton onClickHandler={removeNote} />
+                </NoteInList>
+              );
+            })}
+          </NotesList>
+          <PreviewNote
+            activeNoteTitle={
+              activeNoteIndex !== false
+                ? listOfNotes[activeNoteIndex].noteTitle
+                : null
+            }
+            activeNoteContent={
+              activeNoteIndex !== false
+                ? listOfNotes[activeNoteIndex].noteContent
+                : null
+            }
+            activeNoteIndex={activeNoteIndex}
+          />
+        </section>
+      )}
     </div>
   );
 };

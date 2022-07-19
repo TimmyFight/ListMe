@@ -10,3 +10,10 @@
   padding-top: 40px;
   display: flex;
 }
+
+.zeroNotes {
+  width: 80%;
+  margin: 0 10%;
+  padding-top: 40px;
+  text-align: center;
+}

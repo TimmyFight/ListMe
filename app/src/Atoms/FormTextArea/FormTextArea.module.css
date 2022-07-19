@@ -1,0 +1,6 @@
+.formTextArea {
+  min-height: 100px;
+  background: none;
+  border: 2px black solid;
+  padding: 7px 15px;
+}
