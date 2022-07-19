@@ -1,7 +1,7 @@
 import styles from "./FormInput.module.css";
 
 const FormInput = (props) => {
-  const { type, name, title, placeholder, required } = props;
+  const { type, name, title, placeholder, required, autocomplete } = props;
 
   return (
     <input
@@ -11,6 +11,7 @@ const FormInput = (props) => {
       title={title}
       placeholder={placeholder}
       required={required}
+      autoComplete={autocomplete}
     />
   );
 };
@@ -18,6 +19,7 @@ const FormInput = (props) => {
 FormInput.defaultProps = {
   type: "text",
   required: false,
+  autocomplete: "off",
 };
 
 export default FormInput;
