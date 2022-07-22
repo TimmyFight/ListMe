@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./Home.module.css";
+import NavBar from "../../Modules/NavBar/NavBar";
 import AddNoteForm from "../../Modules/AddNoteForm/AddNoteForm";
 import PreviewNote from "../../Modules/PreviewNote/PreviewNote";
 import NotesList from "../../Modules/NotesList/NotesList";
@@ -43,6 +44,7 @@ const Home = () => {
 
   return (
     <div className={styles.appBody}>
+      <NavBar />
       <AddNoteForm onSubmitHandler={addNote} />
       {listOfNotes.length === 0 ? (
         <section className={styles.zeroNotes}>
