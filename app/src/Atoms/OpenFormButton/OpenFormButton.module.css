@@ -6,3 +6,8 @@
   font-weight: bold;
   cursor: pointer;
 }
+
+.revertColors {
+  border: 1px solid #FFF;
+  color: #FFF;
+}

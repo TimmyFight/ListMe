@@ -6,7 +6,9 @@ const NavBar = () => {
   return (
     <nav className={styles.navBar}>
       <Logo />
-      <OpenFormButton>Open form and add new note</OpenFormButton>
+      <OpenFormButton revertColors={true}>
+        Open form and add new note
+      </OpenFormButton>
     </nav>
   );
 };

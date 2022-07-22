@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import classnames from "classnames";
 import styles from "./NoteInList.module.css";
 import TitleH3 from "../../Atoms/TitleH3/TitleH3";
@@ -43,6 +44,12 @@ const NoteInList = (props) => {
       <p className={styles.noteContent}>{noteContentCut(noteContent)}</p>
     </li>
   );
+};
+
+NoteInList.propTypes = {
+  indexItem: PropTypes.number,
+  onClickHandler: PropTypes.func,
+  activeNoteIndex: PropTypes.number,
 };
 
 export default NoteInList;

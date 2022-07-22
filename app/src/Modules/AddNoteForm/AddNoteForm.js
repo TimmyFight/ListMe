@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import styles from "./AddNoteForm.module.css";
 import TitleH2 from "../../Atoms/TitleH2/TitleH2";
 import FormInput from "../../Atoms/FormInput/FormInput";
@@ -29,6 +30,10 @@ const AddNoteForm = (props) => {
       </form>
     </section>
   );
+};
+
+AddNoteForm.propTypes = {
+  onClickHandler: PropTypes.func,
 };
 
 export default AddNoteForm;

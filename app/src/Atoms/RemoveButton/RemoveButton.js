@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import styles from "./RemoveButton.module.css";
 
 const RemoveButton = (props) => {
@@ -8,6 +9,10 @@ const RemoveButton = (props) => {
       X
     </button>
   );
+};
+
+RemoveButton.propTypes = {
+  onClickHandler: PropTypes.func,
 };
 
 export default RemoveButton;

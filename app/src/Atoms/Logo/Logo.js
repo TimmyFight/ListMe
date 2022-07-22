@@ -1,7 +1,7 @@
 import styles from "./Logo.module.css";
 
 const Logo = () => {
-  return <div className={styles.logo}>ListMe</div>;
+  return <h1 className={styles.logo}>ListMe</h1>;
 };
 
 export default Logo;
