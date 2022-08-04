@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import classnames from "classnames";
 import styles from "./AddNoteForm.module.css";
 import TitleH2 from "../../Atoms/TitleH2/TitleH2";
 import FormInput from "../../Atoms/FormInput/FormInput";
@@ -9,7 +10,13 @@ const AddNoteForm = (props) => {
   const { onSubmitHandler } = props;
 
   return (
-    <section className={styles.noteFormContainer}>
+    <section
+      id="addNoteForm"
+      className={classnames({
+        [styles.noteFormContainer]: true,
+        hidden: true,
+      })}
+    >
       <TitleH2>Add note</TitleH2>
       <form id="noteForm" onSubmit={onSubmitHandler}>
         <FormInput

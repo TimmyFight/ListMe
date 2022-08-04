@@ -6,7 +6,7 @@ const ZeroNotes = (props) => {
   return (
     <>
       <TitleH2>{children}</TitleH2>
-      <OpenFormButton>Open form and add new note</OpenFormButton>
+      <OpenFormButton />
     </>
   );
 };

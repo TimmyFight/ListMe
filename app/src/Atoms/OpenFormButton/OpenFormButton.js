@@ -3,6 +3,13 @@ import classnames from "classnames";
 import styles from "./OpenFormButton.module.css";
 
 const OpenFormButton = (props) => {
+  let showAddNoteForm = (event) => {
+    let addNoteForm = document.querySelector("#addNoteForm");
+    event.preventDefault();
+    addNoteForm.classList.remove("hidden");
+    console.log("addNoteForm ", addNoteForm);
+  };
+
   const { children, revertColors } = props;
   return (
     <button
@@ -11,6 +18,7 @@ const OpenFormButton = (props) => {
         [styles.revertColors]: revertColors,
       })}
       value={children}
+      onClick={showAddNoteForm}
     >
       {children}
     </button>
@@ -19,6 +27,7 @@ const OpenFormButton = (props) => {
 
 OpenFormButton.defaultProps = {
   revertColors: false,
+  children: "Open form and add new Note",
 };
 
 OpenFormButton.propTypes = {
