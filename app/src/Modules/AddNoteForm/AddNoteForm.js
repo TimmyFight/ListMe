@@ -17,24 +17,26 @@ const AddNoteForm = (props) => {
         hidden: true,
       })}
     >
-      <TitleH2>Add note</TitleH2>
-      <form id="noteForm" onSubmit={onSubmitHandler}>
-        <FormInput
-          type="text"
-          name="noteTitle"
-          title="Note title"
-          placeholder="Note title"
-          required="required"
-        />
-        <FormTextArea
-          type="text"
-          name="noteContent"
-          title="Note content"
-          placeholder="Here you can write your note"
-          required="required"
-        />
-        <FormButton type="submit">Add Note</FormButton>
-      </form>
+      <div className={styles.noteFormBody}>
+        <TitleH2>Add your new note</TitleH2>
+        <form id="noteForm" onSubmit={onSubmitHandler}>
+          <FormInput
+            type="text"
+            name="noteTitle"
+            title="Note title"
+            placeholder="Note title"
+            required="required"
+          />
+          <FormTextArea
+            type="text"
+            name="noteContent"
+            title="Note content"
+            placeholder="Here you can write your note"
+            required="required"
+          />
+          <FormButton type="submit">Add Note</FormButton>
+        </form>
+      </div>
     </section>
   );
 };
