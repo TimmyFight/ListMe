@@ -7,7 +7,6 @@ const OpenFormButton = (props) => {
     let addNoteForm = document.querySelector("#addNoteForm");
     event.preventDefault();
     addNoteForm.classList.remove("hidden");
-    console.log("addNoteForm ", addNoteForm);
   };
 
   const { children, revertColors } = props;

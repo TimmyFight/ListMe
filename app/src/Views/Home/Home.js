@@ -14,6 +14,7 @@ const Home = () => {
 
   const addNote = (event) => {
     event.preventDefault();
+    let addNoteForm = document.querySelector("#addNoteForm");
     let noteTitle = document.querySelector(
       '#noteForm [name="noteTitle"]'
     ).value;
@@ -28,6 +29,7 @@ const Home = () => {
     };
     templistOfNotes.push(note);
     setListOfNotes([...templistOfNotes]);
+    addNoteForm.classList.add("hidden");
     return true;
   };
 
@@ -47,9 +49,7 @@ const Home = () => {
       <NavBar />
       <AddNoteForm onSubmitHandler={addNote} />
       {listOfNotes.length === 0 ? (
-        <section className={styles.zeroNotes}>
-          <ZeroNotes>Add your first Note</ZeroNotes>
-        </section>
+        <ZeroNotes>Add your first Note</ZeroNotes>
       ) : (
         <section className={styles.notesContainer}>
           <NotesList listOfNotes={listOfNotes}>
