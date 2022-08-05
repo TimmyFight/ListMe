@@ -1,0 +1,8 @@
+.closeButton {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+}

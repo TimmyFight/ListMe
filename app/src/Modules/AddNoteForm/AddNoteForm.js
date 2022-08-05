@@ -5,6 +5,7 @@ import TitleH2 from "../../Atoms/TitleH2/TitleH2";
 import FormInput from "../../Atoms/FormInput/FormInput";
 import FormTextArea from "../../Atoms/FormTextArea/FormTextArea";
 import FormButton from "../../Atoms/FormButton/FormButton";
+import CloseButton from "../../Atoms/CloseButton/CloseButton";
 
 const AddNoteForm = (props) => {
   const { onSubmitHandler } = props;
@@ -17,6 +18,7 @@ const AddNoteForm = (props) => {
         hidden: true,
       })}
     >
+      <CloseButton />
       <div className={styles.noteFormBody}>
         <TitleH2>Add your new note</TitleH2>
         <form id="noteForm" onSubmit={onSubmitHandler}>
