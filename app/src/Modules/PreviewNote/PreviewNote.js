@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import styles from "./PreviewNote.module.css";
 import TitleH2 from "../../Atoms/TitleH2/TitleH2";
 
@@ -22,10 +21,6 @@ const PreviewNote = (props) => {
       </p>
     </section>
   );
-};
-
-PreviewNote.propTypes = {
-  activeNoteIndex: PropTypes.number,
 };
 
 export default PreviewNote;

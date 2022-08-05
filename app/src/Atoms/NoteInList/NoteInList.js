@@ -49,7 +49,6 @@ const NoteInList = (props) => {
 NoteInList.propTypes = {
   indexItem: PropTypes.number,
   onClickHandler: PropTypes.func,
-  activeNoteIndex: PropTypes.number,
 };
 
 export default NoteInList;
