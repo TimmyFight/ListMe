@@ -10,6 +10,7 @@ const NoteInList = (props) => {
     indexItem,
     onClickHandler,
     activeNoteIndex,
+    isImportant,
     children,
   } = props;
   let tempIndex, isActive;
@@ -34,6 +35,7 @@ const NoteInList = (props) => {
     <li
       className={classnames({
         [styles.elementNoteList]: true,
+        [styles.imprtantNote]: isImportant,
         [styles.active]: isActive,
       })}
       data-key={indexItem}
@@ -49,6 +51,7 @@ const NoteInList = (props) => {
 NoteInList.propTypes = {
   indexItem: PropTypes.number,
   onClickHandler: PropTypes.func,
+  isImportant: PropTypes.bool,
 };
 
 export default NoteInList;

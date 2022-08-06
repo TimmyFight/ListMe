@@ -15,6 +15,7 @@ const Home = () => {
   const addNote = (event) => {
     event.preventDefault();
     let addNoteForm = document.querySelector("#addNoteForm");
+    let isImportant = addNoteForm.querySelector("#Important").checked;
     let noteTitle = document.querySelector(
       '#noteForm [name="noteTitle"]'
     ).value;
@@ -26,6 +27,7 @@ const Home = () => {
     const note = {
       noteTitle: noteTitle,
       noteContent: noteContent,
+      isImportant: isImportant,
     };
     templistOfNotes.push(note);
     setListOfNotes([...templistOfNotes]);
@@ -58,6 +60,7 @@ const Home = () => {
                 <NoteInList
                   noteTitle={elem.noteTitle}
                   noteContent={elem.noteContent}
+                  isImportant={elem.isImportant}
                   indexItem={index}
                   key={index}
                   activeNoteIndex={activeNoteIndex}
@@ -80,6 +83,11 @@ const Home = () => {
                 : null
             }
             activeNoteIndex={activeNoteIndex}
+            isImportant={
+              activeNoteIndex !== false
+                ? listOfNotes[activeNoteIndex].isImportant
+                : null
+            }
           />
         </section>
       )}

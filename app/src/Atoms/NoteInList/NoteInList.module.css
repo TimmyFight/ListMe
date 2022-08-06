@@ -13,3 +13,7 @@
 .active {
   opacity: 0.5;
 }
+
+.imprtantNote h3 {
+  color: #b50404;
+}

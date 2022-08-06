@@ -1,10 +1,18 @@
+import PropTypes from "prop-types";
+import classnames from "classnames";
 import styles from "./PreviewNote.module.css";
 import TitleH2 from "../../Atoms/TitleH2/TitleH2";
 
 const PreviewNote = (props) => {
-  const { activeNoteTitle, activeNoteContent, activeNoteIndex } = props;
+  const { activeNoteTitle, activeNoteContent, activeNoteIndex, isImportant } =
+    props;
   return (
-    <section className={styles.previewNoteContainer}>
+    <section
+      className={classnames({
+        [styles.previewNoteContainer]: true,
+        [styles.imprtantNote]: isImportant,
+      })}
+    >
       <TitleH2>
         {activeNoteIndex === false ||
         activeNoteContent === null ||
@@ -21,6 +29,10 @@ const PreviewNote = (props) => {
       </p>
     </section>
   );
+};
+
+PreviewNote.propTypes = {
+  isImportant: PropTypes.bool,
 };
 
 export default PreviewNote;

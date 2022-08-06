@@ -1,3 +1,7 @@
 .previewNoteContainer {
   flex: 1;
 }
+
+.imprtantNote h2 {
+  color: #b50404;
+}
