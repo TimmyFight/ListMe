@@ -54,4 +54,8 @@ NoteInList.propTypes = {
   isImportant: PropTypes.bool,
 };
 
+NoteInList.defaultProps = {
+  isImportant: false,
+};
+
 export default NoteInList;

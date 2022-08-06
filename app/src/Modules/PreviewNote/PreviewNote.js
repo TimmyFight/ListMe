@@ -35,4 +35,8 @@ PreviewNote.propTypes = {
   isImportant: PropTypes.bool,
 };
 
+PreviewNote.defaultProps = {
+  isImportant: false,
+};
+
 export default PreviewNote;
