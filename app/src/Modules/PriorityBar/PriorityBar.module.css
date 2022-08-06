@@ -1,0 +1,11 @@
+.priorityBar {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.radioContainer {
+  display: flex;
+  gap: 15px;
+  margin-top: 2px;
+}

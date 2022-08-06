@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import classnames from "classnames";
 import styles from "./AddNoteForm.module.css";
+import PriorityBar from "../PriorityBar/PriorityBar";
 import TitleH2 from "../../Atoms/TitleH2/TitleH2";
 import FormInput from "../../Atoms/FormInput/FormInput";
 import FormTextArea from "../../Atoms/FormTextArea/FormTextArea";
@@ -22,6 +23,7 @@ const AddNoteForm = (props) => {
       <div className={styles.noteFormBody}>
         <TitleH2>Add your new note</TitleH2>
         <form id="noteForm" onSubmit={onSubmitHandler}>
+          <PriorityBar />
           <FormInput
             type="text"
             name="noteTitle"
