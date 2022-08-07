@@ -1,0 +1,30 @@
+@keyframes gleam {
+  0% {opacity: 1;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.shortLabel {
+  font-size: 9px;
+  font-weight: bold;
+  border: 1px solid;
+  border-radius: 12%;
+  opacity: 1;
+  animation-name: gleam;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+.shortLabel p {
+  margin: 2px;
+}
+
+.green {
+  border-color: #004708;
+  color: #004708;
+}
+
+.red {
+  border-color: #b50404;
+  color: #b50404;
+}

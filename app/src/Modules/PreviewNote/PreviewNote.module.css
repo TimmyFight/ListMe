@@ -5,3 +5,9 @@
 .imprtantNote h2 {
   color: #b50404;
 }
+
+.titleSection {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}

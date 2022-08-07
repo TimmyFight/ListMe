@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import classnames from "classnames";
 import styles from "./NoteInList.module.css";
 import TitleH3 from "../../Atoms/TitleH3/TitleH3";
+import ShortLabel from "../../Atoms/ShortLabel/ShortLabel";
 
 const NoteInList = (props) => {
   const {
@@ -42,7 +43,10 @@ const NoteInList = (props) => {
       onClick={() => onClickHandler(tempIndex)}
     >
       {children}
-      <TitleH3>{noteTitle}</TitleH3>
+      <section className={styles.titleSection}>
+        <TitleH3>{noteTitle}</TitleH3>
+        {isImportant && <ShortLabel color="red">Important!</ShortLabel>}
+      </section>
       <p className={styles.noteContent}>{noteContentCut(noteContent)}</p>
     </li>
   );
