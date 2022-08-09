@@ -10,10 +10,14 @@
   border: 1px solid;
   border-radius: 12%;
   opacity: 1;
+}
+
+.shortLabel.isGleam {
   animation-name: gleam;
   animation-duration: 5s;
   animation-iteration-count: infinite;
 }
+
 
 .shortLabel p {
   margin: 2px;
@@ -27,4 +31,9 @@
 .red {
   border-color: #b50404;
   color: #b50404;
+}
+
+.black {
+  border-color: #000;
+  color: #000;
 }

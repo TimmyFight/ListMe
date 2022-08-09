@@ -45,7 +45,11 @@ const NoteInList = (props) => {
       {children}
       <section className={styles.titleSection}>
         <TitleH3>{noteTitle}</TitleH3>
-        {isImportant && <ShortLabel color="red">Important!</ShortLabel>}
+        {isImportant && (
+          <ShortLabel color="red" isGleam={true}>
+            Important!
+          </ShortLabel>
+        )}
       </section>
       <p className={styles.noteContent}>{noteContentCut(noteContent)}</p>
     </li>

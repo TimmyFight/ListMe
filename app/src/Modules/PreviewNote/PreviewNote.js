@@ -22,7 +22,11 @@ const PreviewNote = (props) => {
             ? "Click on your Note!"
             : activeNoteTitle}
         </TitleH2>
-        {isImportant && <ShortLabel color="red">Important!</ShortLabel>}
+        {isImportant && (
+          <ShortLabel color="red" isGleam={true}>
+            Important!
+          </ShortLabel>
+        )}
       </section>
       <p>
         {activeNoteIndex === false ||
