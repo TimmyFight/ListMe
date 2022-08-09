@@ -3,16 +3,20 @@ import styles from "./RadioInput.module.css";
 
 const RadioInput = (props) => {
   let { children, group, defaultChecked } = props;
+  const convertChildrenToId = (children) => {
+    children = children.toLowerCase().replace(/ /g, "_");
+    return children;
+  };
   return (
     <div className={styles.radioInput}>
       <input
         type="radio"
-        id={children}
+        id={convertChildrenToId(children)}
         name={group}
         value={children}
         defaultChecked={defaultChecked}
       />
-      <label htmlFor={children}>{children}</label>
+      <label htmlFor={convertChildrenToId(children)}>{children}</label>
     </div>
   );
 };
