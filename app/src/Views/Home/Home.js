@@ -15,7 +15,8 @@ const Home = () => {
   const addNote = (event) => {
     event.preventDefault();
     let addNoteForm = document.querySelector("#addNoteForm");
-    let isImportant = addNoteForm.querySelector("#Important").checked;
+    let isImportant = addNoteForm.querySelector("#important");
+    isImportant = isImportant ? isImportant.checked : false;
     let noteTitle = document.querySelector(
       '#noteForm [name="noteTitle"]'
     ).value;
