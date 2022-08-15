@@ -1,6 +1,6 @@
 import styles from "./PriorityFilter.module.css";
 import ShortLabel from "../../Atoms/ShortLabel/ShortLabel";
-import TitleH3 from "../../Atoms/TitleH3/TitleH3";
+import TitleH4 from "../../Atoms/TitleH4/TitleH4";
 
 const PriorityFilter = () => {
   const toggleFilters = (event) => {
@@ -37,7 +37,7 @@ const PriorityFilter = () => {
 
   return (
     <section className={styles.priorityFilter} onClick={toggleFilters}>
-      <TitleH3>Show me Notes:</TitleH3>
+      <TitleH4>Show me Notes:</TitleH4>
       <ShortLabel color="green" cursor="pointer" filterLabel={true}>
         Normal
       </ShortLabel>
