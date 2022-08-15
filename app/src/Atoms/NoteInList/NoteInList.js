@@ -34,10 +34,13 @@ const NoteInList = (props) => {
 
   return (
     <li
+      id={isImportant ? "importantNote" : "normalNote"}
       className={classnames({
         [styles.elementNoteList]: true,
         [styles.imprtantNote]: isImportant,
         [styles.active]: isActive,
+        importantNote: isImportant,
+        normalNote: !isImportant,
       })}
       data-key={indexItem}
       onClick={() => onClickHandler(tempIndex)}
