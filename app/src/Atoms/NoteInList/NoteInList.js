@@ -18,8 +18,8 @@ const NoteInList = (props) => {
   let tempIndex, isActive;
 
   useEffect(() => {
-    let elementRednered = document.querySelectorAll('li[data-hidden="true"]');
-    elementRednered.forEach((element) => {
+    let elementRendered = document.querySelectorAll('li[data-hidden="true"]');
+    elementRendered.forEach((element) => {
       if (!element.classList.contains("hidden")) {
         element.classList.add("hidden");
       }
