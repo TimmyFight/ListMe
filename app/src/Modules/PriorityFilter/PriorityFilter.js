@@ -19,8 +19,10 @@ const PriorityFilter = () => {
       importantNotes.forEach((element) => {
         if (tempNode.classList.contains("unChecked")) {
           element.classList.add("hidden");
+          element.setAttribute("data-hidden", "true");
         } else {
           element.classList.remove("hidden");
+          element.removeAttribute("data-hidden");
         }
       });
     } else if (tempNode.id === "normal") {
@@ -28,8 +30,10 @@ const PriorityFilter = () => {
       normalNotes.forEach((element) => {
         if (tempNode.classList.contains("unChecked")) {
           element.classList.add("hidden");
+          element.setAttribute("data-hidden", "true");
         } else {
           element.classList.remove("hidden");
+          element.removeAttribute("data-hidden");
         }
       });
     }

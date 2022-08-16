@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 import styles from "./NoteInList.module.css";
@@ -16,6 +17,15 @@ const NoteInList = (props) => {
   } = props;
   let tempIndex, isActive;
 
+  useEffect(() => {
+    let elementRednered = document.querySelectorAll('li[data-hidden="true"]');
+    elementRednered.forEach((element) => {
+      if (!element.classList.contains("hidden")) {
+        element.classList.add("hidden");
+      }
+    });
+  });
+
   const noteContentCut = (noteContent) => {
     let noteShorter = noteContent;
     if (noteContent.length > 50) {
@@ -26,15 +36,14 @@ const NoteInList = (props) => {
 
   if (activeNoteIndex === indexItem) {
     tempIndex = false;
-    isActive = false;
+    isActive = true;
   } else {
     tempIndex = indexItem;
-    isActive = true;
+    isActive = false;
   }
 
   return (
     <li
-      id={isImportant ? "importantNote" : "normalNote"}
       className={classnames({
         [styles.elementNoteList]: true,
         [styles.imprtantNote]: isImportant,
