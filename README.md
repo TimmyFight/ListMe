@@ -11,3 +11,5 @@ This project was bootstrapped with [Create React App](https://create-react-app.d
 In the project directory, you can run:
 To start servers:
 Frontend - Go to main folder 'cd app' and run 'npm start' Port: 3000
+
+The app has been deployed to: [Netlify](https://master--listme-adi.netlify.app/).
